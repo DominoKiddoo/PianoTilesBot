@@ -2,7 +2,7 @@
 
 A simple bot that can play piano tiles! Specifically designed for: https://www.silvergames.com/en/piano-tiles-2
 
-**THIS WILL ONLY WORK ON WINDOWS**
+**THIS HAS ONLY BEEN TESTED ON WINDOWS**
 
 ## Installation
 
