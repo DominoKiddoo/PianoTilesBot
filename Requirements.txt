@@ -1,3 +1,5 @@
 threading
 pyautogui
 keyboard
+numpy
+sounddevice
