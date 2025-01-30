@@ -1,6 +1,16 @@
 import pyautogui
 import time
 import winsound
+import numpy as np
+import sounddevice as sd
+
+def beep(frequency=1000, duration=0.3, sample_rate=44100):
+    t = np.linspace(0, duration, int(sample_rate * duration), False)
+    wave = 0.5 * np.sin(2 * np.pi * frequency * t)
+    sd.play(wave, samplerate=sample_rate)
+    sd.wait()
+
+
 
 
 with open("Positions.txt", "w"):
@@ -10,10 +20,9 @@ with open("Positions.txt", "w"):
 
 for i in range(4):
     time.sleep(3)
-    winsound.Beep(500, 200)
     # Get the current mouse position
     x, y = pyautogui.position()
-    
+    beep()
     # Open the file in append mode and write both x and y values
     with open("Positions.txt", "a") as file:
         file.write(f"{x}\n")  # Write the x position and move to the next line
